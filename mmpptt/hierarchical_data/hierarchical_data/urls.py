@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from hierarchical_data.views import show_genres
-from .models import Genre
-from .admin import GenreAdmin
+from hierarchical_data.views import show_files
+from .models import File
+from .admin import FilesAdmin
 
-admin.site.register(Genre, GenreAdmin)
+admin.site.register(File, FilesAdmin)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('genres/', show_genres),
+    path('files/', show_files),
 ]
